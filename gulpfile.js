@@ -30,7 +30,7 @@ gulp.task('copy', function(){
 
 gulp.task('style', function () {
   const plugins = [
-    autoprefixer({ browser: BROWSER_SUPPORT})
+    autoprefixer({ browsers: BROWSER_SUPPORT})
   ]
   return gulp.src('src/stylesheets/**/*.scss')
   .pipe(sass({importer: moduleImporter()}).on('error', sass.logError))
