@@ -1,0 +1,11 @@
+.hero {
+  &__title {
+    text-transform: capitalize;
+    font-family: 'robotoSlab', serif;
+    font-weight: 300;
+    font-size: 4em; /* 64 */
+  }
+  &__subtitle {
+    font-size: 1.625em; /* 26 */
+  }
+}

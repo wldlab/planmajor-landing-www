@@ -1,0 +1,8 @@
+.contact {
+  background-color: $color-main;
+  color: $color-third;
+  &__content {
+    font-family: 'robotoSlab', serif;
+    font-size: 2.5em; /* 40 */
+  }
+}
