@@ -83,28 +83,31 @@
               <p>1 877 976-2567</p>
             </div>
             <div class="col--50">
-              <form class="contact-form" action="" method="post" netlify-honeypot="bot-field" data-netlify="true">
+<form class="contact-form" action="" method="post" netlify-honeypot="bot-field" data-netlify="true" id="js-contact-form">
                 <p class="hidden">
                   <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </p>
                 <div class="">
-                  <input type="text" name="txt_nom" placeholder="Nom">
+                  <input type="text" name="txt_nom" placeholder="Nom" required>
                 </div>
+
                 <div class="">
-                  <input type="email" name="txt_courriel" placeholder="Courriel">
+                  <input type="email" name="txt_courriel" placeholder="Courriel" required>
                 </div>
+
                 <div class="">
-                  <input type="phone" name="txt_tel" placeholder="Téléphone">
+                  <input type="phone" name="txt_tel" placeholder="Téléphone" required pattern="[1]{0,1}[ -]{0,1}[(]{0,1}[0-9]{3}[)]{0,1}[ -.]{0,1}[0-9]{3}[ -.]{0,1}[0-9]{4}" minlength="10" maxlength="16">
                 </div>
+
                 <div class="">
-                  <textarea name="txt_message" placeholder="Message"></textarea>
+                  <textarea name="txt_message" placeholder="Message" required></textarea>
                 </div>
+
                 <div class="">
                   <input type="submit" name="" value="Envoyer" class="btn btn--full">
                 </div>
-                <div class="contact-form__success-message">
 
-                </div>
+                <div class="contact-form__success-message" id="js-contact-form__success-message"></div>
               </form>
             </div>
           </div>
@@ -126,13 +129,15 @@
     </footer>
 
     <script>
-      $(document).isReady(function() {
-        $("#my-form").submit(function(e) {
+      $(document).ready(function() {
+        console.log( "ready!" );
+        $("#js-contact-form").submit(function(e) {
           e.preventDefault();
 
           var $form = $(this);
+          var $message = $('#js-contact-form__success-message');
           $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Thank you!");
+            $message.append('Votre message a été envoyé!');
           });
         });
       })
