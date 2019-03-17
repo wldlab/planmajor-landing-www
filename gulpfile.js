@@ -43,15 +43,15 @@ gulp.task('style', function () {
 gulp.task('serve', function () {
   browserSync.init({
     server: {
-      baseDir: './app'
+      baseDir: './dist'
     },
     open: false
   })
   gulp.watch([
     'src/**/*',
-    '!src/**/*.{html,scss,js,hbs}'
+    '!src/**/*.{scss,js}'
   ], ['copy']).on('change', browserSync.reload)
   gulp.watch('src/stylesheets/**/*.scss', ['style']).on('change', browserSync.reload)
 })
 
-gulp.task('dev', ['style', 'serve'])
+gulp.task('dev', ['copy', 'style', 'serve'])
