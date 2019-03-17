@@ -5,6 +5,8 @@
     <title>Plan Major</title>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.3.1,npm/slick@1.12.2"></script>
   </head>
   <body>
     <main>
@@ -81,7 +83,10 @@
               <p>1 877 976-2567</p>
             </div>
             <div class="col--50">
-              <form class="contact-form" action="" method="post">
+              <form class="contact-form" action="" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="">
                   <input type="text" name="txt_nom" placeholder="Nom">
                 </div>
@@ -119,5 +124,18 @@
         </ul>
       </div>
     </footer>
+
+    <script>
+      $(document).isReady(function() {
+        $("#my-form").submit(function(e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+          });
+        });
+      })
+    </script>
   </body>
 </html>
