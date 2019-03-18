@@ -20,3 +20,24 @@
     background-position: center top;
   }
 }
+
+
+.slick-dots {
+  position: relative;
+
+  li button::before {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-main;
+    border-radius: 100%;
+    content: "";
+    opacity: 1;
+    background-color: transparentize($color-main, 1);
+    transition: background-color 250ms;
+  }
+
+  li.slick-active button::before {
+    background-color: $color-main;
+    opacity: 1;
+  }
+}
