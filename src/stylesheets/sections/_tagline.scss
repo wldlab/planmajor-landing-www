@@ -5,4 +5,11 @@
   background-image: url(/images/bg_tagline.png);
   background-size: cover;
   padding-bottom: 9.375rem;
+  background-position: right 20% top;
+}
+
+@media (min-width: $ss-medium * 1px) {
+  .tagline {
+    background-position: center top;
+  }
 }
