@@ -1,3 +1,6 @@
+@import "plugins/slick";
+@import "plugins/slick-theme";
+
 @import "normalize.css";
 @import "reset";
 @import "variables";
@@ -12,4 +15,5 @@
 @import "sections/services";
 @import "sections/tagline";
 @import "sections/who-why";
+@import "sections/testimonial";
 @import "sections/contact";
