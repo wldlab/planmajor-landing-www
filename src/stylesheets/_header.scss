@@ -4,6 +4,9 @@
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all 250ms ease-in-out;
+
+  * {transition: all 350ms ease-in-out}
 
   &__container {
     width: 90%;
