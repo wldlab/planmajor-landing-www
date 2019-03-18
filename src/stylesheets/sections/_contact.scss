@@ -3,6 +3,16 @@
   color: $color-third;
   &__content {
     font-family: 'robotoSlab', serif;
-    font-size: 2.5em; /* 40 */
+    font-size: 1.75em; /* 28 */
+    line-height: 1.25em; /* 50 */
+  }
+}
+
+@media (min-width: $ss-small * 1px) {
+  .contact {
+    &__content {
+      font-size: 2.5em; /* 40 */
+      line-height: 1.25em; /* 50 */
+    }
   }
 }

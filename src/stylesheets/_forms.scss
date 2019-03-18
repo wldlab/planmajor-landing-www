@@ -1,10 +1,21 @@
 .btn {
   text-decoration: none;
-  color: $color-main;
   display: table-cell;
   padding: 15px 45px 15px 22px;
-  border: 2px solid $color-main;
   border-radius: 26px;
+  cursor: pointer;
+  color: $color-main;
+  &--ghost {
+    border: 2px solid $color-main;
+  }
+  &--full {
+    background-color: $color-third;
+    border: 0;
+    background-image: url(/images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding: 15px 55px 15px 22px;
+  }
   &__arrow {
     position: relative;
     right: -15px;
@@ -14,5 +25,29 @@
     border-width: 0 2px 2px 0;
     transform: rotate(-45deg);
     border-radius: 1px;
+  }
+
+}
+
+.contact-form {
+  &__input {
+    background-color: transparent;
+    border: 1px solid $color-third;
+    padding: 18px 12px;
+    width: calc(100% - 24px);
+    margin-bottom: .9375rem; /* 15 */
+    color: $color-white;
+    font-weight: 300;
+    &::placeholder {
+      color: $color-third;
+      font-size: 1.125em; /* 18 */
+      font-weight: 300;
+    }
+    &--txt {
+
+    }
+    &--txtarea {
+      height: calc(105px - 36px);
+    }
   }
 }
