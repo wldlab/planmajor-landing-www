@@ -1,17 +1,23 @@
-.container--nav {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
 .header {
+  $_parent: &;
   padding-top: 2.1875rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  &__logo {
+
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
+
+  &__logo {
+    * {
+      fill: $color-white;
+    }
+  }
+
   &__contact-link {
     text-transform: uppercase;
     text-decoration: none;
@@ -20,7 +26,35 @@
     align-items: center;
     font-weight: 400;
   }
+
   &__contact-img {
     margin-left: 1rem;
+    width: 36px;
+
+    * {
+      fill: $color-white;
+    }
+  }
+
+  &--is-scrolled {
+    background-color: $color-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    #{$_parent}__container {
+      @extend .container;
+    }
+
+    #{$_parent}__contact-img * {
+      fill: $color-third;
+    }
+
+    #{$_parent}__contact-link {
+      color: $color-third;
+    }
+
+    #{$_parent}__logo * {
+      fill: $color-third;
+    }
   }
 }
