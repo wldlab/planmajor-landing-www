@@ -1,0 +1,27 @@
+.services {
+  color: $color-third;
+  &__title {
+    font-size: 2.5em; /* 45 */
+  }
+  &__txt {
+    font-size: 1.25em; /* 20 */
+    padding:0 15px;
+    line-height: 1.6em;
+  }
+}
+
+@media (min-width: $ss-small * 1px) {
+  .services {
+    &__txt {
+      padding:0 60px;
+    }
+  }
+}
+
+@media (min-width: $ss-medium * 1px) {
+  .services {
+    &__txt {
+      padding:0 15px;
+    }
+  }
+}

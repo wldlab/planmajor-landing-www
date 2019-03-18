@@ -1,4 +1,6 @@
-.container {
+.container,
+.container--small,
+.container--med {
   width: 90%;
   margin: 0 auto;
 }
@@ -14,7 +16,7 @@
 }
 
 .row {
-  margin: 0 -15px;
+  margin: 0 -15px -30px;
 }
 
 .grid {
@@ -25,6 +27,7 @@
 .col--33,
 .col--50 {
   width: 100%;
+  margin-bottom: 1.875rem;
 }
 
 .section-padding {
@@ -35,6 +38,9 @@
 }
 
 .spacer {
+  &--15 {
+    margin-bottom: .83333rem;
+  }
   &--30 {
     margin-bottom: 1.875rem; /* 30 */
   }
@@ -44,6 +50,14 @@
 }
 
 @media (min-width: $ss-medium * 1px) {
+  .container--small {
+    width: 555px;
+  }
+
+  .row {
+    margin: 0 -15px;
+  }
+
   .col--33,
   .col--50 {
     margin: 0 15px;
@@ -61,6 +75,9 @@
 @media (min-width: $ss-large * 1px) {
   .container {
     width: 1140px;
+    &--med {
+      width: 945px;
+    }
   }
 }
 
