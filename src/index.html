@@ -78,8 +78,25 @@
       </section><!-- /why -->
 
       <section class="section-padding testimonial">
-        <div class="container--med">
-          <h2>Ce qu’ils disent de nous!</h2>
+        <div class="container--med is-center">
+          <h2 class="testimonial__title spacer--70">Ce qu’ils disent de nous!</h2>
+          <div class="testimonial__slider">
+            <div>
+              <p class="testimonial__slider-quote spacer--30">« La disponibilité des agents et la simplicité du processus de réclamation font en sorte que les membres de l’AGECTR puissent profiter de l’expertise du [Plan Major] sans inquiétude. »</p>
+              <p><span class="testimonial__slider-name">Yury Du Bois De Nevele</span><br>
+              Président de l’AGECTR</p>
+            </div>
+            <div>
+              <p class="testimonial__slider-quote spacer--30">« Le Plan Major a toujours su être disponible et s’adapter à nos réalités opérationnelles qui sont très particulières. Leur présence et leur soutien au cours du processus d’implantation à été un facteur déterminant dans la réussite de ce projet. »</p>
+              <p><span class="testimonial__slider-name">Conseil d’administration de l’AETELUQ</span><br>
+              Septembre 2018</p>
+            </div>
+            <div>
+              <p class="testimonial__slider-quote spacer--30">« Ouvert à la discussion l’équipe du Plan Major a su s’adapter à la réalité de nos membres. Nous avons eu un service impeccable à la hauteur de nos attentes. Ils ont été en mesure de nous offrir une assurance qui répond réellement à nos besoins. Toujours disponible pour répondre à nos questions ils se démarquent par leur service à la clientèle incroyable. »</p>
+              <p><span class="testimonial__slider-name">Justin Antaya</span><br>
+              Responsable du dossier des assurances collectives AGEIMQ</p>
+            </div>
+          </div>
         </div>
       </section><!-- /testimonial -->
 
@@ -132,9 +149,15 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="/scripts/slick.min.js"></script>
     <script>
       $(document).ready(function() {
         console.log( "ready!" );
+        $('.testimonial__slider').slick({
+          arrows: false,
+          dots: true
+        });
+
         $("#js-contact-form").submit(function(e) {
           e.preventDefault();
 
