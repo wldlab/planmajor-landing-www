@@ -1,11 +1,18 @@
 .tagline {
   font-family: 'robotoSlab', serif;
-  font-size: 2.8125em; /* 45 */
-  line-height: 1.224em; /* 55 */
+  font-size: 1.75em; /* 28 */
+  line-height: 1.224em; /* 34 */
   background-image: url(/images/bg_tagline.png);
   background-size: cover;
   padding-bottom: 9.375rem;
   background-position: right 20% top;
+}
+
+@media (min-width: $ss-small * 1px) {
+  .tagline {
+    font-size: 2.8125em; /* 45 */
+    line-height: 1.224em; /* 55 */
+  }
 }
 
 @media (min-width: $ss-medium * 1px) {
