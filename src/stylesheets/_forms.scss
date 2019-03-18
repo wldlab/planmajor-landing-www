@@ -5,4 +5,14 @@
   padding: 15px 45px 15px 22px;
   border: 2px solid $color-main;
   border-radius: 26px;
+  &__arrow {
+    position: relative;
+    right: -15px;
+    padding: 5px;
+    display: inline-block;
+    border: solid $color-main;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    border-radius: 1px;
+  }
 }
