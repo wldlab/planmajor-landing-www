@@ -47,6 +47,19 @@
   &--40 {
     margin-bottom: 2.5rem; /* 40 */
   }
+  &--50 {
+    margin-bottom: 3.125rem; /* 50 */
+  }
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: $ss-small * 1px) {
+  .hide-mobile {
+    display: block;
+  }
 }
 
 @media (min-width: $ss-medium * 1px) {
