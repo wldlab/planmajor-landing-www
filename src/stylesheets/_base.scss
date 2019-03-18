@@ -52,16 +52,6 @@
   }
 }
 
-.hide-mobile {
-  display: none;
-}
-
-@media (min-width: $ss-small * 1px) {
-  .hide-mobile {
-    display: block;
-  }
-}
-
 @media (min-width: $ss-medium * 1px) {
   .container--small {
     width: 555px;
@@ -96,4 +86,10 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: $ss-small * 1px) {
+  .hide-mobile {
+    display: none;
+  }
 }
