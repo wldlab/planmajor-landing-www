@@ -1,3 +1,23 @@
 .footer {
-  padding: 4.375rem;
+  padding: 2.625rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    fill: $color-main;
+  }
+  &__quote {
+    font-family: 'robotoSlab', serif;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: $ss-large * 1px) {
+  .footer {
+    padding: 4.375rem 0;
+    justify-content: space-between;
+    &__quote {
+      font-size: 1.875em;
+    }
+  }
 }
