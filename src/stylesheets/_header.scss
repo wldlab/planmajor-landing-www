@@ -43,6 +43,7 @@
     background-color: $color-white;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 9999;
 
     #{$_parent}__container {
       @extend .container;
